@@ -254,8 +254,8 @@ void cyan(){
   
 //ANARANJADO  
 void naranja(){
-  analogWrite(lR,245);
-  analogWrite(lG,200);
+  analogWrite(lR,200);
+  analogWrite(lG,180);
   analogWrite(lB,0);   
 }
     
