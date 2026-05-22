@@ -72,13 +72,18 @@ void loop() {
   int estado1 = digitalRead(b1);
   delay(15);
 
-  if (estado1 == HIGH) estadoB1 = 1;
+  if (estado1 == HIGH) {
+    estadoB1 = 1;
+  }
 
   if (estadoB1 == 1 && estado1 == LOW) {
     modo++;
-    if (modo > 2) modo = 0;
+    if (modo > 2) {
+      modo = 0;
+    }
     apagadobuz = 0;
     estadoB1 = 0;
+  
   }
   
   //MODO 0
@@ -228,7 +233,7 @@ void blanco(){
  
 //AMARILLO  
 void amarillo(){
-  analogWrite(lR,240);
+  analogWrite(lR,255);
   analogWrite(lG,255);
   analogWrite(lB,0);   
 }
@@ -249,8 +254,8 @@ void cyan(){
   
 //ANARANJADO  
 void naranja(){
-  analogWrite(lR,255);
-  analogWrite(lG,165);
+  analogWrite(lR,245);
+  analogWrite(lG,200);
   analogWrite(lB,0);   
 }
     
